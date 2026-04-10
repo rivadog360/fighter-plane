@@ -1,8 +1,10 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -11,14 +13,10 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     //transform translate - movement without physics
-    //all floats need f by it if its the number
-     transform.Translate(new Vector3 (0,1,0) * Time.deltaTime * 8f);  
-     // when the bullet is high enough, destroy it
-     // if statements check things - if are true, the code in the block works, if they are false, the code in the block is igrnored
-     if(transform.position.y > 6.5f) // transform position 8
-     {
-        Destroy(this.gameObject);
-     } 
+        transform.Translate(new Vector3(0, 1, 0) * Time.deltaTime * 8f);
+        if (transform.position.y > 6.5f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

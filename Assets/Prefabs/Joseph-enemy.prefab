@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2931026757193868286}
   - component: {fileID: 7774066672117041947}
   - component: {fileID: 5988177042114717061}
-  - component: {fileID: 868002261121894140}
-  - component: {fileID: -5834846811189669383}
-  - component: {fileID: -2211194916252748300}
-  - component: {fileID: 854567892315672772}
+  - component: {fileID: -3337020506990709502}
+  - component: {fileID: 2063476587766264385}
+  - component: {fileID: 317767489290423259}
+  - component: {fileID: -2882284544341021524}
   m_Layer: 0
   m_Name: Joseph-enemy
   m_TagString: Untagged
@@ -70,7 +70,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,7 +94,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &868002261121894140
+--- !u!114 &-3337020506990709502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,10 +105,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b92cabf66264c244d9f110a0eef506b8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  goingUp: 0
+  m_EditorClassIdentifier: Assembly-CSharp::Glider
+  goingUp: 1
   speed: 1
---- !u!58 &-5834846811189669383
+--- !u!58 &2063476587766264385
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,20 +144,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &-2211194916252748300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4993349404999129324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6df79f39c86093d479e617de2b333a2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  explosionPrefab: {fileID: 4993349404999129324, guid: eb681c107fe0b4845836f5b1a6eb5ce8, type: 3}
---- !u!50 &854567892315672772
+--- !u!50 &317767489290423259
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -184,3 +171,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2882284544341021524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4993349404999129324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6df79f39c86093d479e617de2b333a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  explosionPrefab: {fileID: 4993349404999129324, guid: eb681c107fe0b4845836f5b1a6eb5ce8, type: 3}
