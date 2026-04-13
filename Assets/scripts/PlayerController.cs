@@ -63,15 +63,13 @@ public class PlayerController : MonoBehaviour
     float horizontalScreenSize = gameManager.horizontalScreenSize;
     float verticalScreenSize = gameManager.verticalScreenSize;
 
-    // ✅ Keep horizontal wrap (optional)
     if (transform.position.x <= -horizontalScreenSize || transform.position.x > horizontalScreenSize)
     {
         transform.position = new Vector3(transform.position.x * -1, transform.position.y, 0);
     }
 
-    // ✅ Clamp vertical movement (THIS IS THE FIX)
-    float minY = -verticalScreenSize;   // bottom of screen
-    float maxY = -1.0f;                // 👈 adjust this to keep player near bottom
+    float minY = -verticalScreenSize;   
+    float maxY = -1.0f;                
 
     float clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
 
