@@ -1282,6 +1282,7 @@ MonoBehaviour:
   Troy_enemy3: {fileID: 4993349404999129324, guid: a7d13d90ecdba1845b374e9654d60649, type: 3}
   cloudPrefab: {fileID: 4993349404999129324, guid: 25a6428951266ec4190b6c240d658b8a, type: 3}
   powerupPrefab: {fileID: 4993349404999129324, guid: 0bb124ce003e7c0409a7c495d053898e, type: 3}
+  healthPrefab: {fileID: 4993349404999129324, guid: 698b35eb3634b9e4b84a24deb21c5cf7, type: 3}
   gameOverMenu: {fileID: 540419963}
   audioPlayer: {fileID: 524028467}
   powerUpSound: {fileID: 8300000, guid: 752ca85f206f14146942c3fcafbdd492, type: 3}

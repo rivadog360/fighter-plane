@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject Troy_enemy3;
     public GameObject cloudPrefab;
     public GameObject powerupPrefab;
+    public GameObject healthPrefab;
     public GameObject gameOverMenu;
     public GameObject audioPlayer;
     public AudioClip powerUpSound;
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("CreateEnemy2", 1, 5);
         InvokeRepeating("CreateEnemy3", 5, 7);
         StartCoroutine(SpawnPowerup());
+        StartCoroutine(SpawnHealth());
         powerupText.text = "No powerups Yet!";
     }
 
@@ -121,6 +123,17 @@ public class GameManager : MonoBehaviour
                 audioPlayer.GetComponent<AudioSource>().PlayOneShot(powerDownSound);
                 break; 
         }
+    }
+    void CreateHealth()
+    {
+        Instantiate(healthPrefab, new Vector3(Random.Range(-horizontalScreenSize * .8f, horizontalScreenSize * .8f), Random.Range(-verticalScreenSize * .8f, 0f), 0), Quaternion.identity);
+    }
+    IEnumerator SpawnHealth()
+    {
+        float spawnTime = Random.Range(9, 9);
+        yield return new WaitForSeconds(spawnTime);
+        CreateHealth();
+        StartCoroutine(SpawnHealth());
     }
     public void ChangeLivesText (int currentLives)
     {

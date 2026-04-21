@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: 38e21db71d599f049b5e774d8e0e947c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bulletPrefab: {fileID: 8412594404746268393, guid: 943c867ee9a27ce439607973b47f71d4, type: 3}
+  - explosionPrefab: {fileID: 4993349404999129324, guid: eb681c107fe0b4845836f5b1a6eb5ce8, type: 3}
+  - thruster: {fileID: 4993349404999129324, guid: 68e69069d72f8c244b618427775302b7, type: 3}
+  - shield: {fileID: 4993349404999129324, guid: 41d9d297f34e3fa4683d5a64fb6281ee, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

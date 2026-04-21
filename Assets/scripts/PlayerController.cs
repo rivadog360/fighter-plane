@@ -123,6 +123,16 @@ switch (whichPowerup)
             }
             
         }
+        if (whatDidIHit.tag == "health")
+        {
+            Destroy(whatDidIHit.gameObject);
+            if (lives < 3)
+            {
+                lives += 1;
+            }
+            gameManager.ChangeLivesText(lives);
+
+        }
     }
     void Shooting()
     {
