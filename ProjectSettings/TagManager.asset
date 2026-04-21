@@ -8,6 +8,7 @@ TagManager:
   - Weapons
   - Powerup
   - health
+  - coin
   layers:
   - Default
   - TransparentFX

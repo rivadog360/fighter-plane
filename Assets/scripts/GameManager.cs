@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    //setup variables
     public GameObject playerPrefab;
     public GameObject enemyOnePrefab;
     public GameObject JD_enemy2;
@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject cloudPrefab;
     public GameObject powerupPrefab;
     public GameObject healthPrefab;
+    public GameObject coinPrefab;
     public GameObject gameOverMenu;
     public GameObject audioPlayer;
     public AudioClip powerUpSound;
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("CreateEnemy3", 5, 7);
         StartCoroutine(SpawnPowerup());
         StartCoroutine(SpawnHealth());
+        StartCoroutine(SpawnCoin());
         powerupText.text = "No powerups Yet!";
     }
 
@@ -128,12 +130,24 @@ public class GameManager : MonoBehaviour
     {
         Instantiate(healthPrefab, new Vector3(Random.Range(-horizontalScreenSize * .8f, horizontalScreenSize * .8f), Random.Range(-verticalScreenSize * .8f, 0f), 0), Quaternion.identity);
     }
+    
     IEnumerator SpawnHealth()
     {
         float spawnTime = Random.Range(9, 9);
         yield return new WaitForSeconds(spawnTime);
         CreateHealth();
         StartCoroutine(SpawnHealth());
+    }
+    IEnumerator SpawnCoin()
+    {
+        float spawnTime = Random.Range(5, 5);
+        yield return new WaitForSeconds(spawnTime);
+        CreateCoin();
+        StartCoroutine(SpawnCoin());
+    }
+    void CreateCoin()
+    {
+        Instantiate(coinPrefab, new Vector3(Random.Range(-horizontalScreenSize * .8f, horizontalScreenSize * .8f), Random.Range(-verticalScreenSize * .8f, 0f), 0), Quaternion.identity);
     }
     public void ChangeLivesText (int currentLives)
     {

@@ -133,6 +133,12 @@ switch (whichPowerup)
             gameManager.ChangeLivesText(lives);
 
         }
+        if (whatDidIHit.tag == "coin")
+        {
+            gameManager.AddScore(15);
+            Destroy(whatDidIHit.gameObject);
+
+        }
     }
     void Shooting()
     {
